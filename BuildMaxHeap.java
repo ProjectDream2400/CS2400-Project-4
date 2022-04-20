@@ -52,7 +52,7 @@ public class BuildMaxHeap {
         }
         MaxHeap maxHeap3 = new MaxHeap<Integer>(entries3);
 
-        System.out.print("\n\nHeap built using sequential insertions: ");
+        System.out.print("\n\nHeap built using optimized insertions: ");
         for (int index = 1; index <= 10; index++){
             System.out.print(maxHeap3.heap[index] + " ");
         }
@@ -73,7 +73,7 @@ public class BuildMaxHeap {
         }
         MaxHeap maxHeap4 = new MaxHeap<Integer>(entries4);
 
-        System.out.print("\n\nHeap built using sequential insertions: ");
+        System.out.print("\n\nHeap built using optimized insertions: ");
         for (int index = 1; index <= 10; index++){
             System.out.print(maxHeap4.heap[index] + " ");
         }
