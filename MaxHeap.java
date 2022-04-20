@@ -15,11 +15,25 @@ public final class MaxHeap<T extends Comparable<? super T>>
 	private static final int DEFAULT_CAPACITY = 25;
 	private static final int MAX_CAPACITY = 10000;
    public int swaps;
+   public int swapsarr;
    
    public MaxHeap()
    {
       this(DEFAULT_CAPACITY); // Call next constructor
    } // end default constructor
+
+   public MaxHeap(T[] entries)
+   {
+      this(entries.length);
+      lastIndex = 100;
+      for (int index = 0; index < entries.length; index++){
+         heap[index+1] = entries[index];
+         for (int rootIndex = lastIndex / 2; rootIndex > 0; rootIndex--){
+            reheap(heap, rootIndex, 100);
+            swaps++;
+         }
+      }
+   }
    
    public MaxHeap(int initialCapacity)
    {
